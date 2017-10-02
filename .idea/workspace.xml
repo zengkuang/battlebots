@@ -15,7 +15,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0db8eb-9cd4-41c2-aded-0ea99a4e3881" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_common_tables.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_common_tables.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_const_structs.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_const_structs.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_math.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/arm_math.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_armcc.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_armcc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_armcc_V6.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_armcc_V6.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_gcc.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/cmsis_gcc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm0.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm0.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm0plus.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm0plus.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm3.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm3.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm4.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm4.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm7.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cm7.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmFunc.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmFunc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmInstr.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmInstr.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmSimd.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_cmSimd.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_sc000.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_sc000.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_sc300.h" afterPath="$PROJECT_DIR$/Drivers/CMSIS/Include/core_sc300.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/can.h" afterPath="$PROJECT_DIR$/Inc/can.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/dma.h" afterPath="$PROJECT_DIR$/Inc/dma.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/gpio.h" afterPath="$PROJECT_DIR$/Inc/gpio.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/main.h" afterPath="$PROJECT_DIR$/Inc/main.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/spi.h" afterPath="$PROJECT_DIR$/Inc/spi.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/stm32f4xx_hal_conf.h" afterPath="$PROJECT_DIR$/Inc/stm32f4xx_hal_conf.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/stm32f4xx_it.h" afterPath="$PROJECT_DIR$/Inc/stm32f4xx_it.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/tim.h" afterPath="$PROJECT_DIR$/Inc/tim.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/usart.h" afterPath="$PROJECT_DIR$/Inc/usart.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/usb_device.h" afterPath="$PROJECT_DIR$/Inc/usb_device.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/usbd_cdc_if.h" afterPath="$PROJECT_DIR$/Inc/usbd_cdc_if.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/usbd_conf.h" afterPath="$PROJECT_DIR$/Inc/usbd_conf.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inc/usbd_desc.h" afterPath="$PROJECT_DIR$/Inc/usbd_desc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RMv3testDemo.ioc" afterPath="$PROJECT_DIR$/RMv3testDemo.ioc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RMv3testDemo.xml" afterPath="$PROJECT_DIR$/RMv3testDemo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/STM32F427IIHx_FLASH.ld" afterPath="$PROJECT_DIR$/STM32F427IIHx_FLASH.ld" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/can.c" afterPath="$PROJECT_DIR$/Src/can.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/dma.c" afterPath="$PROJECT_DIR$/Src/dma.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/gpio.c" afterPath="$PROJECT_DIR$/Src/gpio.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/main.c" afterPath="$PROJECT_DIR$/Src/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/spi.c" afterPath="$PROJECT_DIR$/Src/spi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/stm32f4xx_hal_msp.c" afterPath="$PROJECT_DIR$/Src/stm32f4xx_hal_msp.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/stm32f4xx_it.c" afterPath="$PROJECT_DIR$/Src/stm32f4xx_it.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/tim.c" afterPath="$PROJECT_DIR$/Src/tim.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/usart.c" afterPath="$PROJECT_DIR$/Src/usart.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/usb_device.c" afterPath="$PROJECT_DIR$/Src/usb_device.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/usbd_cdc_if.c" afterPath="$PROJECT_DIR$/Src/usbd_cdc_if.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/usbd_conf.c" afterPath="$PROJECT_DIR$/Src/usbd_conf.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/usbd_desc.c" afterPath="$PROJECT_DIR$/Src/usbd_desc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startup/startup_stm32f427xx.s" afterPath="$PROJECT_DIR$/startup/startup_stm32f427xx.s" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +126,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="test_can.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/Src/test_can.c">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,11 +148,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="797" />
+    <option name="height" value="791" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -75,6 +174,24 @@
             <path>
               <item name="RM2018_CLion_Toolchain" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="battlebots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RM2018_CLion_Toolchain" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="battlebots" type="462c0819:PsiDirectoryNode" />
+              <item name="Drivers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RM2018_CLion_Toolchain" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="battlebots" type="462c0819:PsiDirectoryNode" />
+              <item name="Drivers" type="462c0819:PsiDirectoryNode" />
+              <item name="STM32F4xx_HAL_Driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RM2018_CLion_Toolchain" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="battlebots" type="462c0819:PsiDirectoryNode" />
+              <item name="Drivers" type="462c0819:PsiDirectoryNode" />
+              <item name="STM32F4xx_HAL_Driver" type="462c0819:PsiDirectoryNode" />
+              <item name="Src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RM2018_CLion_Toolchain" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -143,33 +260,34 @@
       <option name="presentableId" value="Default" />
       <updated>1504683982944</updated>
       <workItem from="1504683985382" duration="61000" />
+      <workItem from="1506934317752" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61000" />
+    <option name="totallyTimeSpent" value="78000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="791" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -184,6 +302,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Test/Src/test_can.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Src/test_can.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
