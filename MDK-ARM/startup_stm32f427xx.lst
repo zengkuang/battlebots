@@ -4,12 +4,12 @@
 ARM Macro Assembler    Page 1 
 
 
-    1 00000000         ;******************** (C) COPYRIGHT 2016 STMicroelectron
+    1 00000000         ;******************** (C) COPYRIGHT 2017 STMicroelectron
                        ics ********************
     2 00000000         ;* File Name          : startup_stm32f427xx.s
     3 00000000         ;* Author             : MCD Application Team
-    4 00000000         ;* Version            : V2.5.1
-    5 00000000         ;* Date               : 28-June-2016
+    4 00000000         ;* Version            : V2.6.1
+    5 00000000         ;* Date               : 14-February-2017
     6 00000000         ;* Description        : STM32F427x devices vector table 
                        for MDK-ARM toolchain. 
     7 00000000         ;*                      This module performs:
@@ -97,23 +97,23 @@ ARM Macro Assembler    Page 2
    54 00000400         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
    55 00000400         ; </h>
    56 00000400         
-   57 00000400 00001000 
+   57 00000400 00000200 
                        Heap_Size
-                               EQU              0x1000
+                               EQU              0x200
    58 00000400         
    59 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
    60 00000000         __heap_base
    61 00000000         Heap_Mem
                                SPACE            Heap_Size
-   62 00001000         __heap_limit
-   63 00001000         
-   64 00001000                 PRESERVE8
-   65 00001000                 THUMB
-   66 00001000         
-   67 00001000         
-   68 00001000         ; Vector Table Mapped to Address 0 at Reset
-   69 00001000                 AREA             RESET, DATA, READONLY
+   62 00000200         __heap_limit
+   63 00000200         
+   64 00000200                 PRESERVE8
+   65 00000200                 THUMB
+   66 00000200         
+   67 00000200         
+   68 00000200         ; Vector Table Mapped to Address 0 at Reset
+   69 00000200                 AREA             RESET, DATA, READONLY
    70 00000000                 EXPORT           __Vectors
    71 00000000                 EXPORT           __Vectors_End
    72 00000000                 EXPORT           __Vectors_Size
@@ -894,12 +894,12 @@ ARM Macro Assembler    Page 14
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=rmv3testdemo\startup_stm32f427xx.d -ormv3testdemo\startup_stm32
-f427xx.o -I.\RTE\_RMv3testDemo -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Incl
-ude -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM
-32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION S
-ETA 523" --predefine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1" --list=sta
-rtup_stm32f427xx.lst startup_stm32f427xx.s
+erwork --depend=battlebots_regen\startup_stm32f427xx.d -obattlebots_regen\start
+up_stm32f427xx.o -I.\RTE\_battlebots_regen -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.
+1\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\D
+evice\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISI
+ON_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1
+" --list=startup_stm32f427xx.lst startup_stm32f427xx.s
 
 
 
@@ -962,7 +962,7 @@ Symbol: __heap_base
    Uses
       At line 437 in file startup_stm32f427xx.s
 Comment: __heap_base used once
-__heap_limit 00001000
+__heap_limit 00000200
 
 Symbol: __heap_limit
    Definitions
@@ -2005,7 +2005,7 @@ Symbol: WWDG_IRQHandler
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Heap_Size 00001000
+Heap_Size 00000200
 
 Symbol: Heap_Size
    Definitions
