@@ -5,8 +5,8 @@
  * @review Beck Pang
 ***********************************************************/
 
-#ifndef _TEST__DRIVE_H
-#define _TEST__DRIVE_H	
+#ifndef __TEST__DRIVE_H
+#define __TEST__DRIVE_H	
 
 #include "stm32f4xx_HAL.h"
 
@@ -18,4 +18,4 @@ void drive(int, int, int);
 
 // Map range-A to range-B, used to set correct RPM
 float map(float x, float in_min, float in_max, float out_min, float out_max);
-#endif
+#endif /* __TEST__DRIVE_H */

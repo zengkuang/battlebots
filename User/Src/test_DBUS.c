@@ -8,7 +8,7 @@
 #include "test_DBUS.h"
 #include "usart.h"
 
-volatile uint8_t USART_RX_BUF[18];
+uint8_t USART_RX_BUF[18];
 volatile RC_Ctl_t RC_Ctl;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 

@@ -335,7 +335,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../User/Inc</IncludePath>
+              <IncludePath>../Firmware/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../User/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,13 +388,6 @@
         </Group>
         <Group>
           <GroupName>Drivers/CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32F4xx_HAL_Driver</GroupName>
@@ -490,54 +483,54 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
-              <FileName>spi.c</FileName>
+              <FileName>can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/main.c</FilePath>
+              <FilePath>..\Firmware\Src\can.c</FilePath>
             </File>
             <File>
               <FileName>dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/dma.c</FilePath>
+              <FilePath>..\Firmware\Src\dma.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/gpio.c</FilePath>
+              <FilePath>..\Firmware\Src\gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_timebase_TIM.c</FileName>
+              <FileName>spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/stm32f4xx_hal_timebase_TIM.c</FilePath>
-            </File>
-            <File>
-              <FileName>can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/can.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/stm32f4xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usart.c</FilePath>
+              <FilePath>..\Firmware\Src\spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_msp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/stm32f4xx_hal_msp.c</FilePath>
+              <FilePath>..\Firmware\Src\stm32f4xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_timebase_TIM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Src\stm32f4xx_hal_timebase_TIM.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Src\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Src\system_stm32f4xx.c</FilePath>
             </File>
             <File>
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/tim.c</FilePath>
+              <FilePath>..\Firmware\Src\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Firmware\Src\usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -545,19 +538,24 @@
           <GroupName>Application/RM</GroupName>
           <Files>
             <File>
-              <FileName>ChassisMotors.c</FileName>
+              <FileName>chassis_motors.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\Src\ChassisMotors.c</FilePath>
+              <FilePath>..\User\Src\chassis_motors.c</FilePath>
             </File>
             <File>
-              <FileName>PID.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\Src\PID.c</FilePath>
+              <FilePath>..\User\Src\main.c</FilePath>
             </File>
             <File>
-              <FileName>Pushbutton.c</FileName>
+              <FileName>test_DBUS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\Src\Pushbutton.c</FilePath>
+              <FilePath>..\User\Src\test_DBUS.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_drive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\test_drive.c</FilePath>
             </File>
           </Files>
         </Group>

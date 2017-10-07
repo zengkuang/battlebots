@@ -1,5 +1,5 @@
-#ifndef _TEST_DEBUS_H_
-#define _TEST_DEBUS_H_
+#ifndef __TEST_DEBUS_H_
+#define __TEST_DEBUS_H_
 #include "stm32f4xx.h"
 #include "stm32f4xx_hal_uart.h"
 #include "usart.h"
@@ -18,10 +18,8 @@ typedef union{
 			uint8_t  s2;
 		}rc;
 }RC_Ctl_t;
-extern volatile uint8_t USART_RX_BUF[18];
+extern uint8_t USART_RX_BUF[18];
 extern volatile RC_Ctl_t RC_Ctl;
 void RC_Init(void);
-void decryptDBUS();
-
-
-#endif
+void decryptDBUS(void);
+#endif /* __TEST_DEBUS_H_ */
