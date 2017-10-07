@@ -15,15 +15,15 @@ extern DMA_HandleTypeDef hdma_usart1_rx;
 //Initialization 
 void RC_Init()
 {
-    RC_Ctl.rc.channel0 = 5;
-    RC_Ctl.rc.channel1 = 5;
-    RC_Ctl.rc.channel2 = 5;
-    RC_Ctl.rc.channel3 = 5;
+    RC_Ctl.rc.channel0 = RC_CH_VALUE_OFFSET;
+    RC_Ctl.rc.channel1 = RC_CH_VALUE_OFFSET;
+    RC_Ctl.rc.channel2 = RC_CH_VALUE_OFFSET;
+    RC_Ctl.rc.channel3 = RC_CH_VALUE_OFFSET;
     // MX_USART1_UART_Init();
     HAL_UART_Init(&huart1);//Configue all needed for DUBS
     __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE); // Enable IDLE interrupt function
     HAL_UART_Receive_DMA(&huart1, USART_RX_BUF, 18);    //receive now
-}
+}tU
 
 //Interrupt function 
 void decryptDBUS()

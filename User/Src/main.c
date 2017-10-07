@@ -46,16 +46,17 @@
 #include "gpio.h" 
  
 /* USER CODE BEGIN Includes */ 
-#include "chassis_motors.h" 
-#include "test_DBUS.h" 
+#include "chassis_motors.h"
+#include "test_DBUS.h"
+#include "test_drive.h"
  
 /* USER CODE END Includes */ 
  
 /* Private variables ---------------------------------------------------------*/ 
  
 /* USER CODE BEGIN PV */ 
-/* Private variables ---------------------------------------------------------*/ 
- 
+/* Private variables ---------------------------------------------------------*/
+extern volatile RC_Ctl_t RC_Ctl;
 /* USER CODE END PV */ 
  
 /* Private function prototypes -----------------------------------------------*/ 
@@ -124,9 +125,9 @@ int main(void)
     while (1) { 
         /* USER CODE END WHILE */ 
  
-        /* USER CODE BEGIN 3 */ 
-//        Chassis_Set_Speed(0, 0, 0, 0); 
-				HAL_Delay(10); 
+        /* USER CODE BEGIN 3 */
+        drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
+        HAL_Delay(1);
     } 
     /* USER CODE END 3 */ 
  

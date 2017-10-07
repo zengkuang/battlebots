@@ -261,7 +261,7 @@ void USART1_IRQHandler(void)
     if (__HAL_DMA_GET_TC_FLAG_INDEX(&huart1)) {
         __HAL_DMA_CLEAR_FLAG (&huart1, __HAL_DMA_GET_TC_FLAG_INDEX(&huart1));
         decryptDBUS();
-        drive(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
+
     }
 
     HAL_UART_DMAResume(&huart1);

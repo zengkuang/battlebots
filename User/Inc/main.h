@@ -41,7 +41,6 @@
   /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-#define ARM_MATH_CM4
 
 /* Private define ------------------------------------------------------------*/
 #define IST_INT_Pin GPIO_PIN_3
