@@ -7,7 +7,7 @@ project(battlebots C ASM)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB_RECURSE USER_SOURCES "Src/*.c" "User/Src/*.c")
+file(GLOB_RECURSE USER_SOURCES "Firmware/Src/*.c" "User/Src/*.c")
 file(GLOB_RECURSE HAL_SOURCES "Drivers/STM32F4xx_HAL_Driver/Src/*.c")
 #file(GLOB_RECURSE USB_SOURCES
 #        "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/*.c"
@@ -18,7 +18,7 @@ add_library(CMSIS
         Mac_toolchain/startup_stm32f427xx.s)
 #add_library(USB ${USB_SOURCES})
 
-include_directories(Inc)
+include_directories(Firmware/Inc)
 include_directories(Drivers/STM32F4xx_HAL_Driver/Inc)
 include_directories(Drivers/CMSIS/Include)
 include_directories(Drivers/CMSIS/Device/ST/STM32F4xx/Include)

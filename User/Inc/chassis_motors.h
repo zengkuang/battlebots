@@ -15,9 +15,9 @@
 
 #define ENCODER_RATE_BUF_SIZE 3
 typedef struct {
-    int32_t velocity_from_ESC;
-    int32_t position_raw_value;
-    int32_t position_raw_value_last;
+    int16_t velocity_from_ESC;
+    int16_t position_raw_value;
+    int16_t position_raw_value_last;
     int32_t position_ecd_value;
     int32_t position_diff;
     int32_t count;
@@ -40,8 +40,9 @@ extern uint8_t can1_rx_data[8];
 extern uint8_t can2_rx_data[8];
 
 void CanFilter_Init(CAN_HandleTypeDef* hcan);
-void Chassis_update(void);
-void CAN_Send_Msg(CAN_HandleTypeDef* hcan, uint8_t *msg, uint32_t id, uint8_t len);
+void encoderProcess(volatile Encoder*, CanRxMsgTypeDef*);
+void Chassis_Set_Speed(int16_t, int16_t, int16_t, int16_t);
+void CAN_Send_Msg(CAN_HandleTypeDef* hcan, uint8_t *msg, uint32_t id);
 
 #endif
 
