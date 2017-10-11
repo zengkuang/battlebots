@@ -10,8 +10,8 @@
 
 #include "stm32f4xx_HAL.h"
 
-#define RPM_MAX    ((int16_t) 32767)
-#define RPM_MIN    ((int16_t)-32768)
+#define RPM_MAX_820R    ((int16_t) 4000)
+#define RPM_MIN_820R    ((int16_t)-4000)
 
 // Drive function, takes RC joystic values as imput
 void drive_kinematics(int, int, int);

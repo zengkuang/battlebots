@@ -5,6 +5,7 @@
   *@brief 
   */
 
+#include <chassis_motors.h>
 #include "can.h"
 #include "arm_math.h"
 #include "chassis_motors.h"
@@ -20,6 +21,13 @@ volatile Encoder CM3Encoder = {0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // CAN Address 203
 volatile Encoder CM4Encoder = {0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // CAN Address 204
 
 uint32_t can_chassis_count[4] = {0, 0, 0, 0};
+
+extern arm_pid_instance_q15 CMotorPID;
+
+int16_t CM1velocity;
+int16_t CM2velocity;
+int16_t CM3velocity;
+int16_t CM4velocity;
 
 /*
  * can filter must be initialized before use
@@ -114,10 +122,16 @@ void encoderProcess(volatile Encoder* ecd, CanRxMsgTypeDef* msg)
 
 /*
  * PID Closed loop speed controller for chassis motors
- * Input
+ * Input  target speed
+ * Output CAN bus command for the motor current
  */
 void Chassis_Set_Speed(int16_t RPM1, int16_t RPM2, int16_t RPM3, int16_t RPM4)
 {
+    CM1velocity = arm_pid_q15(&CMotorPID, RPM1 - CM1Encoder.velocity_from_ESC) + RPM1;
+    CM2velocity = arm_pid_q15(&CMotorPID, RPM2 - CM2Encoder.velocity_from_ESC) + RPM2;
+    CM3velocity = arm_pid_q15(&CMotorPID, RPM3 - CM3Encoder.velocity_from_ESC) + RPM3;
+    CM4velocity = arm_pid_q15(&CMotorPID, RPM4 - CM4Encoder.velocity_from_ESC) + RPM4;
+
 
     uint8_t can1_message_chassis[8] = {0,0,0,0,0,0,0,0};
 

@@ -30,9 +30,9 @@ int16_t back_left;
 void drive_kinematics(int RX_X2, int RX_Y1, int RX_X1)
 {
     //Remote Control Commands, Mapped to match min and max RPM
-    int16_t drive  = (int16_t)map(RX_X2, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
-    int16_t strafe = (int16_t)map(RX_Y1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
-    int16_t rotate = (int16_t)map(RX_X1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
+    int16_t drive  = (int16_t)map(RX_X2, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN_820R, RPM_MAX_820R);
+    int16_t strafe = (int16_t)map(RX_Y1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN_820R, RPM_MAX_820R);
+    int16_t rotate = (int16_t)map(RX_X1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN_820R, RPM_MAX_820R);
 
     // For later coordinate with Gimbal
     int rotate_feedback = 0;
@@ -42,7 +42,7 @@ void drive_kinematics(int RX_X2, int RX_Y1, int RX_X1)
     front_left = (drive - strafe + rotate) + rotate_feedback;       // CAN ID: 0x203
     back_left = (-1*drive - strafe + rotate) + rotate_feedback;     // CAN ID: 0x204
     //Update using CAN bus chassis function (provided by Alex Wong)
-    Chassis_Set_Speed(0.1*front_right, 0.1*back_right, 0.1*front_left, 0.1*back_left);
+    Chassis_Set_Speed(front_right, back_right, front_left, back_left);
 }
 
 float map(float x, float in_min, float in_max, float out_min, float out_max)

@@ -35,8 +35,9 @@
   * 
   ****************************************************************************** 
   */ 
-/* Includes ------------------------------------------------------------------*/ 
-#include "main.h" 
+/* Includes ------------------------------------------------------------------*/
+#include <arm_math.h>
+#include "main.h"
 #include "stm32f4xx_hal.h" 
 #include "can.h" 
 #include "dma.h" 
@@ -49,6 +50,7 @@
 #include "chassis_motors.h"
 #include "test_DBUS.h"
 #include "test_drive.h"
+#include "arm_math.h"
  
 /* USER CODE END Includes */ 
  
@@ -57,6 +59,7 @@
 /* USER CODE BEGIN PV */ 
 /* Private variables ---------------------------------------------------------*/
 extern volatile RC_Ctl_t RC_Ctl;
+arm_pid_instance_q15 CMotorPID;
 /* USER CODE END PV */ 
  
 /* Private function prototypes -----------------------------------------------*/ 
@@ -114,9 +117,10 @@ int main(void)
     RC_Init(); 
     CanFilter_Init(&hcan1); 
  
-    HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0); 
- 
- 
+    HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);
+
+    CMotorPID.Kp = 2;
+    arm_pid_init_q15(&CMotorPID, 0);
  
     /* USER CODE END 2 */ 
  
