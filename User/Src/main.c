@@ -50,7 +50,7 @@
 #include "chassis_motors.h"
 #include "test_DBUS.h"
 #include "test_drive.h"
-#include "arm_math.h"
+#include "test_imu.h"
  
 /* USER CODE END Includes */ 
  
@@ -59,7 +59,12 @@
 /* USER CODE BEGIN PV */ 
 /* Private variables ---------------------------------------------------------*/
 extern volatile RC_Ctl_t RC_Ctl;
-arm_pid_instance_q15 CMotorPID;
+arm_pid_instance_f32 CMotorPID;
+arm_pid_instance_f32 YawPositionPID;
+arm_pid_instance_f32 YawVelocityPID;
+arm_pid_instance_f32 PitchPositionPID;
+arm_pid_instance_f32 PitchVelocityPID;
+
 /* USER CODE END PV */ 
  
 /* Private function prototypes -----------------------------------------------*/ 
@@ -113,15 +118,26 @@ int main(void)
     MX_TIM12_Init(); 
     MX_USART2_UART_Init(); 
  
-    /* USER CODE BEGIN 2 */ 
+    /* USER CODE BEGIN 2 */
+    MPU6500_Init();
     RC_Init(); 
     CanFilter_Init(&hcan1); 
  
     HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);
 
     CMotorPID.Kp = 2;
-    arm_pid_init_q15(&CMotorPID, 0);
- 
+
+    YawPositionPID.Kp = 1;
+    YawVelocityPID.Kp = 10;
+    PitchPositionPID.Kp = 1;
+    PitchVelocityPID.Kp = 15;
+
+    arm_pid_init_f32(&CMotorPID, 0);
+
+    arm_pid_init_f32(&YawPositionPID, 0);
+    arm_pid_init_f32(&YawVelocityPID, 0);
+    arm_pid_init_f32(&PitchPositionPID, 0);
+    arm_pid_init_f32(&PitchVelocityPID, 0);
     /* USER CODE END 2 */ 
  
     /* Infinite loop */ 
@@ -130,8 +146,9 @@ int main(void)
         /* USER CODE END WHILE */ 
  
         /* USER CODE BEGIN 3 */
-        drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
-        HAL_Delay(1);
+
+//
+//        HAL_Delay(1);
     } 
     /* USER CODE END 3 */ 
  

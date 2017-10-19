@@ -10,8 +10,8 @@
 
 #include "stm32f4xx_HAL.h"
 
-#define TEST_CAN1_ID    0x201
-#define TEST_CAN2_ID    0x202
+#define ENCODER_MAX_RANGE 8172
+#define ENCODER_ANGLE     360.0f  // Use 360 degree as a round
 
 #define ENCODER_RATE_BUF_SIZE 3
 typedef struct {

@@ -38,11 +38,16 @@
 /* USER CODE BEGIN 0 */
 #include "test_DBUS.h"
 #include "test_drive.h"
+#include "test_imu.h"
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim6;
 extern DMA_HandleTypeDef hdma_spi5_rx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
@@ -219,6 +224,22 @@ void DMA1_Stream5_IRQHandler(void)
 
     /* USER CODE END DMA1_Stream5_IRQn 1 */
 }
+
+/**
+* @brief This function handles TIM2 global interrupt.
+*/
+void TIM2_IRQHandler(void)
+{
+    /* USER CODE BEGIN TIM2_IRQn 0 */
+
+    /* USER CODE END TIM2_IRQn 0 */
+    HAL_TIM_IRQHandler(&htim2);
+    /* USER CODE BEGIN TIM2_IRQn 1 */
+    IMU_Get_Data();
+    drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
+    /* USER CODE END TIM2_IRQn 1 */
+}
+
 
 /**
 * @brief This function handles CAN1 TX interrupts.
