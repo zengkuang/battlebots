@@ -97,10 +97,10 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef *hcan)
                 case 0x204:     // Motor ID = 4
                     encoderProcess(&CM4Encoder, hcan->pRxMsg);
                     break;
-                case 0x205:
+                case 0x205:     // Motor ID = 5, yaw
                     encoderProcess(&CM5Encoder, hcan->pRxMsg);
                     break;
-                case 0x206:
+                case 0x206:     // Motor ID = 6, pitch
                     encoderProcess(&CM6Encoder, hcan->pRxMsg);
                     break;
             }

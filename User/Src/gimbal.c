@@ -6,7 +6,6 @@
 #include "chassis_motors.h" // Need to get the CAN bus out of the chassis_motors later
 #include "test_imu.h"
 #include "arm_math.h"
-#include "main.h"
 
 extern volatile Encoder CM5Encoder;
 extern volatile Encoder CM6Encoder;
