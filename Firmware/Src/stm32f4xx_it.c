@@ -47,7 +47,10 @@ extern CAN_HandleTypeDef hcan2;
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim5;
+extern TIM_HandleTypeDef htim7;
+extern TIM_HandleTypeDef htim8;
+extern TIM_HandleTypeDef htim12;
 extern DMA_HandleTypeDef hdma_spi5_rx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
@@ -226,6 +229,21 @@ void DMA1_Stream5_IRQHandler(void)
 }
 
 /**
+* @brief This function handles TIM7 global interrupt.
+*/
+void TIM7_IRQHandler(void)
+{
+    /* USER CODE BEGIN TIM7_IRQn 0 */
+
+    /* USER CODE END TIM7_IRQn 0 */
+    HAL_TIM_IRQHandler(&htim7);
+    /* USER CODE BEGIN TIM7_IRQn 1 */
+    IMU_Get_Data();
+//    drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
+    /* USER CODE END TIM7_IRQn 1 */
+}
+
+/**
 * @brief This function handles TIM2 global interrupt.
 */
 void TIM2_IRQHandler(void)
@@ -236,10 +254,9 @@ void TIM2_IRQHandler(void)
     HAL_TIM_IRQHandler(&htim2);
     /* USER CODE BEGIN TIM2_IRQn 1 */
     IMU_Get_Data();
-    drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
+//    drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2);
     /* USER CODE END TIM2_IRQn 1 */
 }
-
 
 /**
 * @brief This function handles CAN1 TX interrupts.

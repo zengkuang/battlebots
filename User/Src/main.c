@@ -74,8 +74,8 @@ void SystemClock_Config(void);
  
 /* USER CODE END PFP */ 
  
-/* USER CODE BEGIN 0 */ 
-uint8_t MOTOR_IS_ON = 0;    //ALL MOTOR OFF 
+/* USER CODE BEGIN 0 */
+
 /* USER CODE END 0 */ 
  
 int main(void) 
@@ -90,8 +90,7 @@ int main(void)
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */ 
     HAL_Init(); 
  
-    /* USER CODE BEGIN Init */ 
-    //printf("Hello World"); 
+    /* USER CODE BEGIN Init */
     /* USER CODE END Init */ 
  
     /* Configure the system clock */ 
@@ -113,7 +112,8 @@ int main(void)
     MX_TIM5_Init(); 
     MX_TIM2_Init(); 
     MX_TIM3_Init(); 
-    MX_TIM4_Init(); 
+    MX_TIM4_Init();
+    MX_TIM7_Init();
     MX_TIM8_Init(); 
     MX_TIM12_Init(); 
     MX_USART2_UART_Init(); 
@@ -223,7 +223,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 /* USER CODE BEGIN Callback 0 */ 
  
 /* USER CODE END Callback 0 */ 
-    if (htim->Instance == TIM6) { 
+    if (htim->Instance == TIM6) {
         HAL_IncTick(); 
     } 
 /* USER CODE BEGIN Callback 1 */ 
