@@ -54,7 +54,8 @@ TIM_HandleTypeDef htim8;
 TIM_HandleTypeDef htim12;
 
 /* TIM2 init function
- * Usage: only for interrupt of the functions
+ * Usage:   recovered for PWM generation
+ *          moved the system timer to TIM7
  */
 void MX_TIM2_Init(void)
 {
@@ -62,45 +63,48 @@ void MX_TIM2_Init(void)
     TIM_OC_InitTypeDef sConfigOC;
 
     htim2.Instance = TIM2;
-    htim2.Init.Prescaler = 179; // (180MHz / 1MHz) - 1, output 1MHz
+    htim2.Init.Prescaler = 0;
     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim2.Init.Period = 999;
+    htim2.Init.Period = 0;
     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-
-//    if (HAL_TIM_PWM_Init(&htim2) != HAL_OK) {
-//        _Error_Handler(__FILE__, __LINE__);
-//    }
-//
-//    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-//    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-//    if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK) {
-//        _Error_Handler(__FILE__, __LINE__);
-//    }
-//
-//    sConfigOC.OCMode = TIM_OCMODE_PWM1;
-//    sConfigOC.Pulse = 0;
-//    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-//    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-//    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK) {
-//        _Error_Handler(__FILE__, __LINE__);
-//    }
-//
-//    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK) {
-//        _Error_Handler(__FILE__, __LINE__);
-//    }
-//
-//    HAL_TIM_MspPostInit(&htim2);
-
-    if (HAL_TIM_PWM_Init(&htim2) != HAL_OK) {
+    if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+    {
         _Error_Handler(__FILE__, __LINE__);
     }
 
-    // Initialize the interrupt
-    HAL_TIM_Base_Start_IT(&htim2);
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+    {
+        _Error_Handler(__FILE__, __LINE__);
+    }
 
-    // Add the TIM2 to Nested Vector Interrupt Controller
-    HAL_NVIC_SetPriority(TIM2_IRQn, 3, 0);
-    HAL_NVIC_EnableIRQ(TIM2_IRQn);
+    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+    sConfigOC.Pulse = 0;
+    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+    {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+
+    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+    {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+
+    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+    {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+
+    if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+    {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+
+    HAL_TIM_MspPostInit(&htim2);
+
 }
 
 /* TIM3 init function */
@@ -234,13 +238,33 @@ void MX_TIM5_Init(void)
 /* TIM7 init function
  * Usage: only for interrupt of the functions, main function call
  */
+/* TIM7 init function */
 void MX_TIM7_Init(void)
 {
+    TIM_MasterConfigTypeDef sMasterConfig;
+
     htim7.Instance = TIM7;
-    htim7.Init.Prescaler = 179;  // ((180MHz / 1MHz)-1); // 1MHz clock
+    htim7.Init.Prescaler = 179;
     htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim7.Init.Period = 999; // main control to 1 kHz
-    htim7.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim7.Init.Period = 999;
+    if (HAL_TIM_Base_Init(&htim7) != HAL_OK) {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK) {
+        _Error_Handler(__FILE__, __LINE__);
+    }
+}
+
+//void MX_TIM7_Init(void)
+//{
+//    htim7.Instance = TIM7;
+//    htim7.Init.Prescaler = 179;  // ((180MHz / 1MHz)-1); // 1MHz clock
+//    htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
+//    htim7.Init.Period = 999; // main control to 1 kHz
+//    htim7.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 //    if (HAL_TIM_PWM_Init(&htim7) != HAL_OK) {
 //        _Error_Handler(__FILE__, __LINE__);
 //    }
@@ -251,7 +275,7 @@ void MX_TIM7_Init(void)
 //    // Add the TIM2 to Nested Vector Interrupt Controller
 //    HAL_NVIC_SetPriority(TIM7_IRQn, 3, 0);
 //    HAL_NVIC_EnableIRQ(TIM7_IRQn);
-}
+//}
 
 /* TIM8 init function */
 void MX_TIM8_Init(void)
@@ -401,6 +425,29 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *tim_pwmHandle)
         /* USER CODE BEGIN TIM12_MspInit 1 */
 
         /* USER CODE END TIM12_MspInit 1 */
+    }
+}
+
+/*
+ * Use to add the TIM7 to the Nested Vector Interrupt Controller
+ */
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
+{
+
+    if(tim_baseHandle->Instance==TIM7)
+    {
+        /* USER CODE BEGIN TIM7_MspInit 0 */
+
+        /* USER CODE END TIM7_MspInit 0 */
+        /* TIM7 clock enable */
+        __HAL_RCC_TIM7_CLK_ENABLE();
+
+        /* TIM7 interrupt Init */
+        HAL_NVIC_SetPriority(TIM7_IRQn, 3, 0);
+        HAL_NVIC_EnableIRQ(TIM7_IRQn);
+        /* USER CODE BEGIN TIM7_MspInit 1 */
+
+        /* USER CODE END TIM7_MspInit 1 */
     }
 }
 
@@ -611,6 +658,28 @@ void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef *tim_pwmHandle)
         /* USER CODE BEGIN TIM12_MspDeInit 1 */
 
         /* USER CODE END TIM12_MspDeInit 1 */
+    }
+}
+
+/*
+ * Use to disable the TIM7 from the Nested Vector Interrupt Controller
+ */
+void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
+{
+
+    if(tim_baseHandle->Instance==TIM7)
+    {
+        /* USER CODE BEGIN TIM7_MspDeInit 0 */
+
+        /* USER CODE END TIM7_MspDeInit 0 */
+        /* Peripheral clock disable */
+        __HAL_RCC_TIM7_CLK_DISABLE();
+
+        /* TIM7 interrupt Deinit */
+        HAL_NVIC_DisableIRQ(TIM7_IRQn);
+        /* USER CODE BEGIN TIM7_MspDeInit 1 */
+
+        /* USER CODE END TIM7_MspDeInit 1 */
     }
 }
 
