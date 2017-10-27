@@ -32,6 +32,6 @@
 "battlebots_regen\test_dbus.o"
 "battlebots_regen\test_drive.o"
 --library_type=microlib --strict --scatter "battlebots_regen\battlebots_regen.sct"
---diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "battlebots_regen.map" -o battlebots_regen\battlebots_regen.axf

@@ -895,10 +895,10 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=battlebots_regen\startup_stm32f427xx.d -obattlebots_regen\start
-up_stm32f427xx.o -I.\RTE\_battlebots_regen -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.
+up_stm32f427xx.o -I.\RTE\_battlebots_regen -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.
 1\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\D
 evice\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISI
-ON_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1
+ON_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="STM32F427xx SETA 1
 " --list=startup_stm32f427xx.lst startup_stm32f427xx.s
 
 
