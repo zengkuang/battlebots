@@ -59,11 +59,17 @@
 extern volatile RC_Ctl_t RC_Ctl; 
 /* USER CODE END PV */  
   
+typedef enum{
+	UP = 1,
+	DOWN,
+	MID
+}buttonPos;	
 /* Private function prototypes -----------------------------------------------*/  
 void SystemClock_Config(void);  
 /* USER CODE BEGIN PFP */  
 /* Private function prototypes -----------------------------------------------*/  
-  
+ void drive(int RX_X2, int RX_Y1, int RX_X1,int RX_Y2,buttonPos b1, buttonPos b2);
+ void GPIO_PP_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 /* USER CODE END PFP */  
   
 /* USER CODE BEGIN 0 */  
@@ -114,8 +120,14 @@ int main(void)
     RC_Init();  
 		CanFilter_Init(&hcan1);  
 		HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);  
-  
-  
+		GPIO_PP_Init(GPIOA, GPIO_PIN_5);
+		GPIO_PP_Init(GPIOE, GPIO_PIN_6);
+		GPIO_PP_Init(GPIOE, GPIO_PIN_5);
+		GPIO_PP_Init(GPIOF, GPIO_PIN_1);
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_5,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_6,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOF,GPIO_PIN_1,GPIO_PIN_RESET);
   
     /* USER CODE END 2 */  
   
@@ -125,7 +137,7 @@ int main(void)
         /* USER CODE END WHILE */  
   
         /* USER CODE BEGIN 3 */ 
-        drive_kinematics(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2,RC_Ctl.rc.s2); 
+        drive(RC_Ctl.rc.channel0, RC_Ctl.rc.channel1, RC_Ctl.rc.channel2,RC_Ctl.rc.channel3,(buttonPos)RC_Ctl.rc.s1,(buttonPos)RC_Ctl.rc.s2);
         HAL_Delay(1); 
     }  
     /* USER CODE END 3 */  
@@ -187,6 +199,60 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */  
   
   
+void drive_pnuemb(buttonPos b,GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin){
+	switch(b){
+		case UP: HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_SET);break;
+		case DOWN:
+		case MID: HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_RESET);break;	
+	}
+}
+
+void drive_pnuemb2(buttonPos b,GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin){
+	switch(b){
+		case UP: HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_RESET);break;
+		case DOWN:
+		case MID: HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_SET);break;	
+	}
+}
+
+void drive_pnuemc(int16_t channel,GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin){
+	if(channel<0)
+		HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_SET);
+	else
+		
+		HAL_GPIO_WritePin(GPIOx,GPIO_Pin,GPIO_PIN_RESET);
+}
+
+ void drive(int RX_X2, int RX_Y1, int RX_X1,int RX_Y2,buttonPos b1, buttonPos b2){
+	 
+	 int16_t chan0  = (int16_t)map(RX_X2, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
+	 int16_t chan1  = (int16_t)map(RX_Y1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
+	 int16_t chan2  = (int16_t)map(RX_X1, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
+	 int16_t chan3  = (int16_t)map(RX_Y2, RC_CH_VALUE_MIN, RC_CH_VALUE_MAX, RPM_MIN, RPM_MAX);
+	switch(b1){
+		case UP: drive_kinematics(RX_X2, RX_Y1, RX_X1,(int)b2);break;
+		case DOWN: drive_kinematics(RX_X2, RX_Y1, 1024,3);
+			drive_pnuemb(b2,GPIOA,GPIO_PIN_5); 
+							 drive_pnuemc(chan3,GPIOE,GPIO_PIN_6);
+		break;
+		case MID: drive_kinematics(RX_X2, RX_Y1, 1024,3);
+			drive_pnuemb2(b2,GPIOE,GPIO_PIN_5);
+							drive_pnuemc(chan3,GPIOF,GPIO_PIN_1);
+		break;
+	}
+}
+
+void GPIO_PP_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin){
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_InitStruct.Pin = GPIO_Pin;
+
+
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOx,&GPIO_InitStruct);
+}
+
   
 /* USER CODE END 4 */  
   
