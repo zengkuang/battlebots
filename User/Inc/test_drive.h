@@ -26,7 +26,7 @@ typedef struct{
 
 
 // Drive function, takes RC joystic values as input
-void drive_kinematics(int, int, int);
+void drive_kinematics(int, int, int,int);
 float speedPID(float target_value,Encoder encoder,PIDparameter* s);
 // Map range-A to range-B, used to set correct RPM
 float map(float x, float in_min, float in_max, float out_min, float out_max);
